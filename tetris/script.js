@@ -120,3 +120,18 @@ function moveRight() {
     }
     draw()
   }
+
+  function rotate() {
+    undraw()
+    currentRotation ++
+    if(currentRotation === current.length) { //if the current rotation gets to 4, make it go back to 0
+      currentRotation = 0
+    }
+    current = theTetrominoes[random][currentRotation]
+    checkRotatedPosition()
+    draw()
+  }
+  
+  const displaySquares = document.querySelectorAll('.mini-grid div')
+  const displayWidth = 4
+  const displayIndex = 0
