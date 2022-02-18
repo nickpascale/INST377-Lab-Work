@@ -1,9 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
-  const squares = Array.from(document.querySelector('.grid div'));
+  let squares = Array.from(document.querySelector('.grid div'));
   const ScoreDisplay = document.querySelector('#score');
   const StartBtn = document.querySelector('#start-button');
   const width = 10;
+  let timerId;
+  let score = 0;
+  const colors = [
+    'orange',
+    'red',
+    'purple',
+    'green',
+    'blue'
+  ]
 });
 
 const lTetromino = [
@@ -183,5 +192,12 @@ function addScore() {
       squares = squaresRemoved.concat(squares);
       squares.forEach((cell) => grid.appendChild(cell));
     }
+  }
+}
+
+function gameOver() {
+  if (current.some((index) => squares[currentPosition + index].classList.contains('taken'))) {
+    scoreDisplay.innerHTML = 'end';
+    clearInterval(timerId);
   }
 }
