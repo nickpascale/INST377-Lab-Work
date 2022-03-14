@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Nick Pascale</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <h1>Nicolas Pascale Lab 6: Lab 6 - Handling JSON Responses from REST-ful APIs
+</h1>
+  <form action='https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json' method='get' class='speaker-form'>
+    <div class='form-row'>
+        <label for='full-name'>First Name</label>
+        <input id='full-name' name='full-name' type='text'/>
+    </div>
+    <div class='form-row'>
+        <label for='email'>Food Preference</label>
+        <input id='text'
+               name='text'
+               type='text'
+               placeholder='"pizza"'/>
+    </div>
+    <fieldset class='legacy-form-row'>
+        <legend>Veggie or Vegan</legend>
+        <input id='talk-type-1'
+               name='talk-type'
+               type='radio'
+               value='Yes' />
+        <label for='talk-type-1' class='radio-label'>Yes</label>
+        <input id='talk-type-2'
+               name='talk-type'
+               type='radio'
+               value='No'
+               checked />
+        <label for='talk-type-2' class='radio-label'>No</label>
+    </fieldset>
+    <div class='form-row'>
+        <button>Submit</button>
+    </div>
+  </form>
+  <body>
+    <header class='speaker-form-header'>
+      <p><em>There will be something here in 2 weeks</em></p>
+    </header>
+  </body>
+</html>
